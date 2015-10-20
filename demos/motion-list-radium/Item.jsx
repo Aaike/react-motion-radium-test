@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
 
+@Radium
 export class Item extends Component {
 
   static propTypes = {
