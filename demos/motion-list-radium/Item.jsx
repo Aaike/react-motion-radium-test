@@ -44,6 +44,7 @@ export class Item extends Component {
   }
 
   _handleRightButtonClick(e) {
+    if(e.type=="mouseup" || e.type=="touchend") return;
     if (this.props.onClose) this.props.onClose(e);
   }
 

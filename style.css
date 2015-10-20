@@ -5,6 +5,10 @@ hr {
   border-bottom: 1px dashed #f7f7f7;
 }
 
+*:focus{
+  outline:none;
+}
+
 .learn a {
   font-weight: normal;
   text-decoration: none;
