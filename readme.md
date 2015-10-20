@@ -4,7 +4,7 @@ React demos with `radium` and `react-motion`
 
 See the [react-motion test](http://aaike.github.io/react-motion-radium-test/demos/motion-list)
 
-See the [react-motion test with radium](http://aaike.github.io/react-motion-radium-test/demos/motion-list)
+See the [react-motion test with radium](http://aaike.github.io/react-motion-radium-test/demos/motion-list-radium)
 
 ## Development
 
