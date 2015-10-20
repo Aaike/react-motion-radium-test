@@ -1,0 +1,13 @@
+# Package managers
+#######################
+bower_components
+node_modules
+npm-debug.log
+
+# OS
+#######################
+.DS_Store
+
+# IDE
+#######################
+.idea
