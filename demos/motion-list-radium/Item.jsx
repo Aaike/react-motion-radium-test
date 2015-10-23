@@ -9,13 +9,15 @@ export class Item extends Component {
     onClose: PropTypes.func,
     style: PropTypes.object,
     label: PropTypes.any,
-    children: PropTypes.any
+    children: PropTypes.any,
+    id: PropTypes.string,
   };
 
   getStyles() {
     return {
       container: {
-        lineHeight: '2.7rem'
+        lineHeight: '2.7rem',
+        ':hover': {fontWeight: 'bold'}
       },
       span: {
         marginTop: '.2rem',
@@ -43,9 +45,13 @@ export class Item extends Component {
     };
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.state !== nextState;
+  }
+
   _handleRightButtonClick(e) {
     if(e.type=="mouseup" || e.type=="touchend") return;
-    if (this.props.onClose) this.props.onClose(e);
+    if (this.props.onClose) this.props.onClose(this.props.id, e);
   }
 
   render() {

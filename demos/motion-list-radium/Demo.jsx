@@ -9,6 +9,9 @@ export default class Demo extends Component {
   constructor(props) {
     super(props);
 
+    // Bind once to avoid passing a new callback each time
+    this.handleDestroy = this.handleDestroy.bind(this);
+
     this.state = {
       todos: {
         // key is creation date
@@ -172,16 +175,15 @@ export default class Demo extends Component {
                         const config = configs[key];
 
                         const {data: {isDone, text}, ...style} = config;
-
                         let itemStyle = _.merge({}, styles.item, style);
 
                         return (
                           <li key={key} style={itemStyle}>
                             <Item
-                              onClose={this.handleDestroy.bind(this, key)}
-                              style={styles.todoItem}
+                              onClose={this.handleDestroy}
                               label={config.data.text}
                               iconRight="X"
+                              id={key}
                             />
                           </li>
                         );
